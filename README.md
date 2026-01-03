@@ -4,7 +4,7 @@ A python project that uses Librosa and other libraries to analyze the key that a
 ## Analytical tools
 We will first analyze part of "Une Barque sur l'Ocean," a complex piece for solo piano by French composer Maurice Ravel. Click the below to be taken to Soundcloud and hear the .mp3 file:
 
-[<img src="unebarquesoundcloud.PNG" width="500">](https://soundcloud.com/jack-mcarthur-6407193/f-minor-segment-of-une-barque-sur-locean)
+[<img src="enigmaSoundcloud.JPG" width="500">](https://soundcloud.com/jack-mcarthur-6407193/f-minor-segment-of-une-barque-sur-locean)
 
 This piece has several sections with different keys, as we can learn by loading it using the Librosa library and passing it to an instance of the Tonal_Fragment class. We do this below, and output a chomagram, a chart indicating the intensity associated with each pitch class (C, C#, D, etc.) vs. time.
 ```python
@@ -15,7 +15,7 @@ y_harmonic, y_percussive = librosa.effects.hpss(y)
 unebarque = Tonal_Fragment(y_harmonic, sr)
 unebarque.chromagram("Une Barque sur l\'Ocean")
 ```
-<img src="unebarquechromagram.png" width="600">
+<img src="engima.png" width="600">
 
 It is apparent that this clip has distinct sections, in which different pitch classes are most prominent; for example, the section from t=0 sec. to t=22 sec. uses the pitches C# and F# more than any other. We can determine how much each pitch class is used in that chunk with the following code:
 ```python
