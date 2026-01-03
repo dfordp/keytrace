@@ -80,7 +80,7 @@ G# minor	-0.166
 ```
 This shows E minor as a clear second-best option, and allows for comparison between the goodness of fit of all keys.
 
-This algorithm is not perfect, but it does offer warning when it gives a result with low confidence. This can be seen in the next section of the clip of "Une Barque sur l'Ocean," from t=22 sec. to t=33 sec., which is in E minor:
+This algorithm is not perfect, but it does offer warning when it gives a result with low confidence. This can be seen in the next section of the clip of from t=22 sec. to t=33 sec., which is in D major and A minor:
 ```python
 unebarque_e_min = Tonal_Fragment(y_harmonic, sr, tstart=22, tend=33)
 unebarque_e_min.print_key()
