@@ -1,10 +1,13 @@
-# musical-key-finder
-A python project that uses Librosa and other libraries to analyze the key that a song (an .mp3) is in, i.e. F major or C# minor, using the Krumhansl-Schmuckler key-finding algorithm.
+# KeyTrace
+Side project I randomly built while working on my own music. I kept running into situations where I wanted a quick, transparent way to understand the musical key of an audio file without relying on black-box tools, so I put together a simple key-analysis utility using Librosa and classic music theory–driven DSP techniques.
 
-## Analytical tools
-We will first analyze part of "Une Barque sur l'Ocean," a complex piece for solo piano by French composer Maurice Ravel. Click the below to be taken to Soundcloud and hear the .mp3 file:
+The project analyzes .wav and .mp3 files and estimates their musical key (e.g. F major, C♯ minor) using the Krumhansl–Schmuckler key-finding algorithm, which evaluates tonal distributions rather than assuming the loudest note is the tonic.
 
 [<img src="enigmaSoundcloud.JPG" width="500">](https://soundcloud.com/glitchy-550098644/engima)
+
+## Approach
+
+The idea behind KeyTrace is straightforward and interpretable:
 
 This piece has several sections with different keys, as we can learn by loading it using the Librosa library and passing it to an instance of the Tonal_Fragment class. We do this below, and output a chomagram, a chart indicating the intensity associated with each pitch class (C, C#, D, etc.) vs. time.
 ```python
